@@ -1,0 +1,162 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.grid-container {
+	width: 100%;
+	max-width: 1200px;
+	margin: auto;
+	padding: 0 8px;
+}
+
+.grid-wrapper{
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	gap: 10px;
+}
+
+.grid-wrapper--mod{
+	background-color: rgba(224,18,101,0.5); 		/*модификация*/
+	color: #fff;
+	border: 1px #E01266 solid;
+	height: 100px;
+	border-radius: 4px;
+	text-align: center;
+	font-family: 'Montserrat', sans-serif;
+	text-align: center;	
+}
+
+.grip-wrapper--modFont{
+		font-family: 'Montserrat', sans-serif;
+		text-align: center;
+}
+
+.grid-wrapper__col-auto-span-row1{						/*элемент*/
+	grid-column: auto / span 1;
+}
+
+.grid-wrapper__col-auto-span-row2{
+	grid-column: auto / span 2;
+}
+
+.grid-wrapper__col-auto-span-row3{
+	grid-column: auto / span 3;
+}
+
+.grid-wrapper__col-auto-span-row4{
+	grid-column: auto / span 4;
+}
+
+.grid-wrapper__col-auto-span-row5{
+	grid-column: auto / span 6;
+}
+
+.grid-wrapper__col-auto-span-row6{
+	grid-column: auto / span 12;
+}
+
+@media screen and (max-width: 1024px){
+	.main{
+		width: 100%;
+	}
+		.grid-wrapper__col-auto-span-row1{
+		grid-column: auto / span 2;
+			}
+		.grid-wrapper__col-auto-span-row2{
+			grid-column: auto / span 3
+			}
+		.grid-wrapper__col-auto-span-row3{
+			grid-column: auto / span 4
+			}
+		.Separation__level4{
+			grid-column: auto / span 6
+			}			
+		.grid-wrapper__col-auto-span-row5, .grid-wrapper__col-auto-span-row6{
+			grid-column: auto / span 12
+			}					
+	@media screen and (max-width: 768px){
+	.grid-wrapper__col-auto-span-row1{
+		grid-column: auto / span 3;
+		}
+		.grid-wrapper__col-auto-span-row2{
+			grid-column: auto / span 4;
+			}
+		.grid-wrapper__col-auto-span-row3{
+			grid-column: auto / span 6;
+			}
+		.Separation__level4, .grid-wrapper__col-auto-span-row5, .grid-wrapper__col-auto-span-row6{
+			grid-column: auto / span 12;
+			}
+	}
+	@media screen and (max-width: 425px){
+	.grid-wrapper__col-auto-span-row1{
+		grid-column: auto / span 4;
+		}
+	.grid-wrapper__col-auto-span-row2{
+		grid-column: auto / span 6;
+		}
+	.grid-wrapper__col-auto-span-row3, .Separation__level4, .grid-wrapper__col-auto-span-row5, .grid-wrapper__col-auto-span-row6{
+		grid-column: auto / span 12;
+		}
+	}
+	@media screen and (max-width: 375px){
+	.grid-wrapper__col-auto-span-row1{
+		grid-column: auto / span 6;
+		}
+	.grid-wrapper__col-auto-span-row2, .grid-wrapper__col-auto-span-row3, .Separation__level4, .grid-wrapper__col-auto-span-row5, .grid-wrapper__col-auto-span-row6{
+		grid-column: auto / span 12;
+		}
+	{
+}
+}
+	@media screen and (max-width: 320px){
+	.grid-wrapper__col-auto-span-row1, .grid-wrapper__col-auto-span-row2, .grid-wrapper__col-auto-span-row3, .Separation__level4, .grid-wrapper__col-auto-span-row5, .grid-wrapper__col-auto-span-row6{
+		grid-column: auto / span 12;
+		}
+	}
+}
